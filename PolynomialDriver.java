@@ -1,7 +1,7 @@
 import java.io.File;
 import java.io.IOException;
 
-public class Driver {
+public class PolynomialDriver {
     public static void main(String[] args) throws IOException {
     
         // Create polynomials
@@ -24,14 +24,11 @@ public class Driver {
         // Evaluate polynomial at x = 2
         double x = 2;
         double result = poly1.evaluate(x);
-        System.out.println("poly1(2) = " + result); // Expected: 3
+        System.out.println("Evaluation of polynomial 1 at x = " + x + ": " + result); // Expected: 3
 
         // Check if polynomial has a root at x = 1
-        if (poly1.hasRoot(1)) {
-            System.out.println("1 is a root of s");
-        } else {
-            System.out.println("1 is not a root of s");
-        }
+        boolean hasRoot = poly1.hasRoot(1);
+        System.out.println("Polynomial 1 has a root at x = 1: " + hasRoot); // Expected: false
 
         // Multiply polynomials
         Polynomial product = poly1.multiply(poly2);
